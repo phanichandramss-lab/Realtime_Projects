@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Leave Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Employee Leave Management</h1>
+        <p class="subtitle">Submit and track your leave requests</p>
+
+        <form id="leaveForm">
+            <label for="employee_name">Employee Name</label>
+            <input type="text" id="employee_name" required>
+
+            <label for="leave_type">Leave Type</label>
+            <select id="leave_type" required>
+                <option value="">Select leave type</option>
+                <option value="Sick Leave">Sick Leave</option>
+                <option value="Casual Leave">Casual Leave</option>
+                <option value="Earned Leave">Earned Leave</option>
+            </select>
+
+            <label for="start_date">Start Date</label>
+            <input type="date" id="start_date" required>
+
+            <label for="end_date">End Date</label>
+            <input type="date" id="end_date" required>
+
+            <label for="reason">Reason</label>
+            <textarea id="reason" rows="4" required></textarea>
+
+            <button type="submit">Submit Leave</button>
+        </form>
+
+        <p id="message"></p>
+
+        <h2>Leave Requests</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Employee</th>
+                        <th>Leave Type</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="leaveTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
